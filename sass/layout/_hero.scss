@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-
+  
   &__logo {
     padding: 40px 0 35px;
   }
@@ -14,5 +14,24 @@
     font-weight: bold;
     font-size: 40px;
     line-height: 49px;
+  }
+
+  @include media(">large") {
+    height: auto;
+    background-image: url('/images/hero/mobile/hero-desktop.png');
+
+    &__logo {
+      padding: 60px 0 50px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+      font-size: 70px;
+      line-height: 85px;
+    }
+
+    &__scroll {
+      padding-bottom: 55px;
+    }
   }
 }
