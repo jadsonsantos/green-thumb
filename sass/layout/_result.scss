@@ -1,0 +1,39 @@
+.s-result {
+  padding: 50px 0 30px;
+  background-color: $color-5;
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+    
+    color: $color-6;
+  }
+
+  &__instructions {
+    margin-bottom: 38px;
+    width: 220px;
+    color: $color-6;
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  &__image img {
+    display: block;
+    margin: auto;
+  }
+
+  @include media(">large") {
+    padding: 50px 0 70px;
+
+    .container {
+      display: flex;
+    }
+
+    &__infos {
+      margin-right: 110px;
+      width: 442px;
+    }
+  }
+}

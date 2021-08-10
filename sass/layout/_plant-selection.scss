@@ -1,0 +1,28 @@
+.s-plant-selection {
+  img {
+    width: 75px;
+    margin-bottom: 15px;
+  }
+
+  &__instructions {
+    margin-bottom: 24px;
+    width: 220px;
+    color: $color-4;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @include media(">large") {
+    padding: 50px 0;
+
+    .container {
+      display: flex;
+    }
+
+    &__step {
+      &:not(:last-of-type) {
+        margin-right: 100px;
+      }
+    }
+  }
+}
