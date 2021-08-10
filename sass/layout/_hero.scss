@@ -1,0 +1,18 @@
+.s-hero {
+  background-image: url('/images/hero/mobile/hero-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  &__logo {
+    padding: 40px 0 35px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    color: $white;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+  }
+}

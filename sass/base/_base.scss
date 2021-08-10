@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Set up margin and padding to 0
+ */
+ *{
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+//Flexbox
+// .flex{
+//   display: flex;
+
+//   // Space between
+//   &-jc-sb{
+//     justify-content: space-between;
+//   }
+
+//   // Space around
+//   &-jc-sa{
+//     justify-content: space-around;
+//   }
+
+//   // Horizontal align
+//   &-jc-c{
+//     justify-content: center;
+//   }
+
+//   // Vertical align
+//   &-ai-c{
+//     align-items: center;
+//   }
+// }
+
+// Basic styles for lists
+li{
+  list-style: none;
+}

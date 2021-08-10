@@ -1,4 +1,7 @@
+@import 'sass/abstracts/main';
+@import "sass/base/main";
+@import 'sass/layout/hero';
+
 body {
     font-family: "Montserrat", sans-serif;
-    background-color: green;
 }
