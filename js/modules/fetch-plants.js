@@ -4,20 +4,23 @@ export default function initFetchPlants() {
       const plantsResponse = await fetch(url);
       const plantsJSON = await plantsResponse.json();
       const plantsListEl = document.querySelector('[data-id="plant-list"]');
-      plantsJSON.forEach(plant => {
+      plantsJSON.forEach((plant) => {
         const liPlant = createPlant(plant);
-        plantsListEl.insertAdjacentHTML('beforeend', liPlant);
+        plantsListEl.insertAdjacentHTML("beforeend", liPlant);
       });
-    } catch(erro) {
+    } catch (erro) {
       console.log(erro);
     }
   }
-  
+
   function createPlant(plant) {
-    const isStaffFavorite = plant.staff_favorite ? 'is-staff-favorite' : '';
-    const li = 
-      `<li class="plant__item ${isStaffFavorite}">
-        ${plant.staff_favorite ? '<span class="plant__flag">✨ Staff favorite</span>' : ''}
+    const isStaffFavorite = plant.staff_favorite ? "is-staff-favorite" : "";
+    const li = `<li class="plant__item ${isStaffFavorite}">
+        ${
+          plant.staff_favorite
+            ? '<span class="plant__flag">✨ Staff favorite</span>'
+            : ""
+        }
         <img class="plant__image" src="${plant.url}">
         <div class="plant__details">
           <div class="plant__left">
@@ -34,9 +37,11 @@ export default function initFetchPlants() {
         </div>
       </li>
     `;
-  
+
     return li;
   }
-  
-  fetchPlants(`https://front-br-challenges.web.app/api/v2/green-thumb/?sun=high&water=regularly&pets=false`);
+
+  fetchPlants(
+    `https://front-br-challenges.web.app/api/v2/green-thumb/?sun=high&water=regularly&pets=false`
+  );
 }
