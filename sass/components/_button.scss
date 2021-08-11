@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+@mixin btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 30px;
+	height: 50px;
+	
+	background-image: none;
+	border-radius: 25px;
+	border: 1px solid transparent;
+	
+	font-family: $font-1;
+	font-size: 16px;
+	line-height: 20px;
+
+	transition: background-color .2s ease;
+	user-select: none;
+	box-shadow: none;
+	text-shadow: none;
+	cursor: pointer;
+}
+
+@mixin btn-primary {
+	background-color: $color-1;
+	color: $white;
+
+	&:hover {
+		background-color: $white;
+		border-color: $color-1;
+		color: $color-1; 
+	}
+}
+
+@mixin btn-secondary {
+	border-color: $color-1;
+	color: $color-1;
+	background-color: $white;
+
+	&:hover {
+		background-color: $color-1;
+		color: $white;
+	}
+}
+
+
+
+.btn {
+	@include btn;
+	
+	&-primary {
+		@include btn-primary;
+	}
+	
+	&-secondary {
+		@include btn-secondary;
+	}
+}
