@@ -28,20 +28,70 @@
         <div class="container">
           <article class="s-plant-selection__step">
             <img src="/images/illustrations/sun.png" alt="Sun">
-            <h3 class="s-plant-selection__instructions"><strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.</h3>
-            <select name="" id="">
-              <option value="No sunlight">No sunlight</option>
-              <option value="Low sunlight">Low sunlight</option>
-              <option value="High sunlight">High sunlight</option>
-            </select>
+            <h3 class="s-plant-selection__instructions">
+              <strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.
+            </h3>
+            <div class="select-box">
+              <div class="options-container">
+                <div class="option">
+                  <input type="radio" class="radio" id="no" name="no" />
+                  <label for="no">No sunlight</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="low" name="low" />
+                  <label for="low">Low sunlight</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="high" name="high" />
+                  <label for="high">High sunlight</label>
+                </div>
+              </div>
+              <div class="selected">
+                Select...
+              </div>
+            </div>
           </article>
           <article class="s-plant-selection__step">
             <img src="/images/illustrations/wateringcan.png" alt="Watering Can">
             <h3 class="s-plant-selection__instructions"><strong>2.</strong> How often do you want to <strong>water</strong> your plant?</h3>
+            <div class="select-box">
+              <div class="options-container">
+                <div class="option">
+                  <input type="radio" class="radio" id="regularly" name="regularly" />
+                  <label for="regularly">Regularly</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="daily" name="daily" />
+                  <label for="daily">Daily</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="rarely" name="rarely" />
+                  <label for="rarely">Rarely</label>
+                </div>
+              </div>
+              <div class="selected">
+                Select...
+              </div>
+            </div>
           </article>
           <article class="s-plant-selection__step">
             <img src="/images/illustrations/dog.png" alt="Dog">
             <h3 class="s-plant-selection__instructions"><strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants? </h3>
+            <div class="select-box">
+              <div class="options-container">
+                <div class="option">
+                  <input type="radio" class="radio" id="true" name="true" />
+                  <label for="true">No/They don’t care</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="false" name="false" />
+                  <label for="false">Yes</label>
+                </div>
+              </div>
+              <div class="selected">
+                Select...
+              </div>
+            </div>
           </article>
         </div>
       </section>
