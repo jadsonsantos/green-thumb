@@ -1,0 +1,46 @@
+.icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 18px;
+  height: 18px;
+  display: inline-block;
+
+  &-sun {
+    &-no {
+      background-image: url('/images/icons/no-sun.svg');
+    }
+
+    &-low {
+      background-image: url('/images/icons/low-sun.svg');
+    }
+
+    &-high {
+      background-image: url('/images/icons/high-sun.svg');
+    }
+  }
+  
+  &-water {
+    &-rarely {
+      background-image: url('/images/icons/1-drop.svg');
+    }
+
+    &-regularly {
+      background-image: url('/images/icons/2-drops.svg');
+    }
+
+    &-daily {
+      background-image: url('/images/icons/3-drops.svg');
+    }
+  }
+
+  &-toxicity {
+    &-true {
+      background-image: url('/images/icons/toxic.svg');
+    }
+
+    &-false {
+      background-image: url('/images/icons/pet.svg');
+    }
+  }
+}
