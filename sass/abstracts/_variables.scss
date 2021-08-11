@@ -8,11 +8,11 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$font-1: "Montserrat", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$font-2: 'Roboto', sans-serif !default;
 
 
 $black: #000;
@@ -45,6 +45,8 @@ $color-3: #75BC97;
 $color-4: #848484;
 $color-5: #F2F2F2;
 $color-6: #A9A9A9;
+$color-7: #257556;
+$color-8: #6E6E6E;
 
 
 

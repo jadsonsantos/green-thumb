@@ -1,8 +1,10 @@
 @import 'sass/abstracts/main';
 @import "sass/base/main";
+@import 'sass/components/main';
 @import "sass/vendors/main";
 @import 'sass/layout/main';
 
+
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: $font-1;
 }
