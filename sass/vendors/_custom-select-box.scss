@@ -1,7 +1,5 @@
-
 .select-box {
   display: flex;
-  width: 400px;
   flex-direction: column;
 }
 
@@ -22,23 +20,22 @@
 .selected {
   border: 1px solid $color-9;
   border-radius: 20px;
-  color: $color-9;
-  position: relative;
 
+  position: relative;
   order: 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
 }
 
 .selected::after {
   content: "";
-  background: url("/images/icons/arrow-down.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  @include arrow;
+  @include arrow-down;
 
   position: absolute;
-  height: 100%;
-  width: 32px;
-  right: 10px;
-  top: 5px;
+  top: 10px;
+  right: 13px;
 
   transition: all 0.4s;
 }
@@ -54,8 +51,8 @@
     border-radius: 20px 20px 0 0;
 
     &::after {
-      transform: rotateX(180deg);
-      top: -6px;
+      transform: rotate(225deg);
+      top: 20px;
     }
   }
 } 
@@ -73,8 +70,13 @@
 
 .select-box .option,
 .selected {
-  padding: 12px 24px;
+  padding: 6px 18px;
   cursor: pointer;
+  
+  color: $color-9;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 27px;
 }
 
 .select-box .option:hover {
@@ -88,4 +90,14 @@
 
 .select-box .option .radio {
   display: none;
+}
+
+@include media(">large") {
+  .select-box {
+    width: 300px;
+  }
+
+  .selected {
+
+  }
 }
