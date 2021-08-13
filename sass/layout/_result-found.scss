@@ -1,6 +1,11 @@
 .s-result-found {
+  display: none;
   padding: 30px 0;
   background-color: $color-5;
+
+  &.active {
+    display: block;
+  }
 
   &__image {
     width: 146px;
