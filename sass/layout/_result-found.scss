@@ -24,8 +24,18 @@
     width: 100%;
     margin-top: 32px;
 
-    &__icon {
+    &:before {
+      content: '';
+      background-image: url('/images/icons/arrow-up.svg');
+      height: 22px;
+      width: 17px;
       margin-right: 16px;
+    }
+
+    &:hover {
+      &:before {
+        background-image: url('/images/icons/arrow-up-white.svg');
+      }
     }
   }
 
