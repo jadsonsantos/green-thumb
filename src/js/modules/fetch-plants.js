@@ -6,7 +6,7 @@ export default function initFetchPlants() {
   const resultEl = document.querySelector('.s-result');
   const resultFoundEl = document.querySelector('.s-result-found');
 
-  let selectedOptions = {};
+  const selectedOptions = {};
 
   async function fetchPlants(url) {
     try {
@@ -19,7 +19,7 @@ export default function initFetchPlants() {
         resultFoundEl.classList.add('active');
       });
     } catch (erro) {
-      console.log(erro);
+      console.error(erro);
     }
   }
 
