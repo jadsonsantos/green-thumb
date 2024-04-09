@@ -6,14 +6,11 @@
   "scripts": {
     "start": "parcel index.html --open"
   },
-  "dependencies": {
-    "parcel": "1.12.4"
-  },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
     "parcel-bundler": "^1.6.1",
-    "sass": "^1.37.5"
+    "sass": "^1.74.1"
   },
   "keywords": [],
   "babel": {
