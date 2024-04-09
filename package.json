@@ -4,7 +4,7 @@
   "description": "Simple Parcel Sandbox",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open"
+    "start": "parcel src/index.html --open"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
