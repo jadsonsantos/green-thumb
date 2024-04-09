@@ -1,11 +1,12 @@
 import Plant from '../components/Plant';
+import { API_BASE_URL } from '../constants';
 
 export default function initFetchPlants() {
   const plantsListEl = document.querySelector('[data-id="plant-list"]');
   const resultEl = document.querySelector('.s-result');
   const resultFoundEl = document.querySelector('.s-result-found');
 
-  let selectedOptions = {};
+  const selectedOptions = {};
 
   async function fetchPlants(url) {
     try {
@@ -18,7 +19,7 @@ export default function initFetchPlants() {
         resultFoundEl.classList.add('active');
       });
     } catch (erro) {
-      console.log(erro);
+      console.error(erro);
     }
   }
 
@@ -41,7 +42,7 @@ export default function initFetchPlants() {
 
           if (selectedOptions.water && selectedOptions.pet) {
             fetchPlants(
-              `https://front-br-challenges.web.app/api/v2/green-thumb/?sun=${selectedOptions.sun}&water=${selectedOptions.water}&pets=${selectedOptions.pet}`
+              `${API_BASE_URL}?sun=${selectedOptions.sun}&water=${selectedOptions.water}&pets=${selectedOptions.pet}`
             );
           }
         }, 2000);
@@ -68,7 +69,7 @@ export default function initFetchPlants() {
 
           if (selectedOptions.sun && selectedOptions.pet) {
             fetchPlants(
-              `https://front-br-challenges.web.app/api/v2/green-thumb/?sun=${selectedOptions.sun}&water=${selectedOptions.water}&pets=${selectedOptions.pet}`
+              `${API_BASE_URL}?sun=${selectedOptions.sun}&water=${selectedOptions.water}&pets=${selectedOptions.pet}`
             );
           }
         }, 2000);
@@ -95,7 +96,7 @@ export default function initFetchPlants() {
 
           if (selectedOptions.water && selectedOptions.sun) {
             fetchPlants(
-              `https://front-br-challenges.web.app/api/v2/green-thumb/?sun=${selectedOptions.sun}&water=${selectedOptions.water}&pets=${selectedOptions.pet}`
+              `${API_BASE_URL}?sun=${selectedOptions.sun}&water=${selectedOptions.water}&pets=${selectedOptions.pet}`
             );
           }
         }, 2000);
